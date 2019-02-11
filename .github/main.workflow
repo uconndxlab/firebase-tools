@@ -1,11 +1,11 @@
 workflow "Build" {
   on = "push"
-  resolves = ["Build"]
+  resolves = ["Build Image"]
 }
 
-action "Build" {
+action "Build Image" {
   uses = "./"
   env = {
-    NODE_VERSION = "11"
+    NODE_VERSION = "8"
   }
 }
