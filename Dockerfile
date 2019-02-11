@@ -1,5 +1,5 @@
 # Releases: https://github.com/nodejs/Release#release-schedule
-FROM node:11
+FROM node:${NODE_VERSION}
 
 # set user to avoid permission issues
 # (see https://github.com/nodejs/node-gyp/issues/1236)
