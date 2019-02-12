@@ -7,8 +7,8 @@ if [ -z "$FIREBASE_TOKEN" ]; then
     exit 126
 fi
 
-if [ -n "$PROJECT_ID" ]; then
-    firebase use --add $PROJECT_ID
+if [ -n "$APP" ]; then
+    firebase use --add $APP
 fi
 
 sh -c "firebase $*"
