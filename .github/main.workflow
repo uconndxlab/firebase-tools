@@ -8,4 +8,5 @@ action "Build Image" {
   env = {
     NODE_VERSION = "8"
   }
+  secrets = ["FIREBASE_TOKEN"]
 }
