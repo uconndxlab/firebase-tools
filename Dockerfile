@@ -22,7 +22,10 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 # install firebase-tools
 RUN npm install -g firebase-tools
 
+COPY "entrypoint.sh" "/entrypoint.sh"
+
 # reset user back to root
 USER root
 
+ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "--help" ]
